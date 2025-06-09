@@ -2,6 +2,9 @@
 <li>Download the JS file</li>
 <li>On each page add the following: <code><script> type="text/javascript" src="single_Code_Genesys_Form.js" defer</script></code></li>
 <br>
+Sample: <br>
+<link>https://bronzecooley.com/watermelonSugar.php</link>
+<br>
 <h1>Notes</h1>
 A single script will create the form and interact with Genesys Messenger.
 
