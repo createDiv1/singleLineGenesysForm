@@ -1,8 +1,8 @@
 console.log("%cForm design by Bronze Cooley. Contact: formdesign@bronzecooley.com. Add 'Inquiry' to the subject line.","color:yellow;");
-console.log("Attributes expected: fName,lName,email,subject");
+//  console.log("Attributes expected: fName,lName,email,subject");
 
-const dKey = '12343534556547546456' ; // Add your deployment key
-const pEnv = 'prod'; // Add your Genesys Cloud environment
+const dKey = '[DEPLOYMENTKEY]';
+const pEnv = '[Assigned Environment]';
 const searchKey = 'gcmcsessionActive';
 const keyLookUp = `_${dKey}:gcmcsessionActive`;
 
@@ -55,7 +55,7 @@ if(isActive){
                                                 });
                                         };
                                 });
-                               Genesys('command','Launcher.show');
+                               Genesys('command','Launcher.show'); 
                         });
                 });
 
@@ -174,11 +174,11 @@ if(isActive){
                                 startChat.onclick = () => {
                                         container.style.display = 'block';
                                         startChat.remove();
-                                        const rect = startBtn.getBoundingClientRect();
-                                        console.log(window.innerHeight);
-                                        console.log(rect.bottom);
-                                        cancelBtn.style.bottom = (window.innerHeight)- rect.bottom + "px";
-                                        cancelBtn.style.display = 'block';
+	                                const rect = startBtn.getBoundingClientRect();
+	                                console.log(window.innerHeight);
+        	                        console.log(rect.bottom);
+                	                cancelBtn.style.bottom = (window.innerHeight)- rect.bottom + "px";
+					cancelBtn.style.display = 'block';
                                 };
                                 const startImg = document.createElement("img");
                                 startImg.src = "https://raw.githubusercontent.com/createDiv1/Genesys-Cloud-Message-Form/refs/heads/main/createDIV1Form/img/downButton.png";
@@ -190,7 +190,7 @@ if(isActive){
                                 startChat.appendChild(startImg);
 
 
-                                document.body.appendChild(cancelBtn);
+				document.body.appendChild(cancelBtn);
                                 document.body.appendChild(container);
                                 document.body.appendChild(startChat);
                                 console.log("Played");
@@ -202,11 +202,11 @@ if(isActive){
                         document.getElementById('bc_chat').addEventListener('submit',function(e){
                                 e.preventDefault();
                                 document.getElementById('bc_chat').style.display = 'none';
-                                document.getElementById('cnclButton').style.display = 'none';
+				document.getElementById('cnclButton').style.display = 'none';
                                 fName = document.getElementById('fName').value;
                                 lName = document.getElementById('lName').value;
                                 email = document.getElementById('email').value;
-                                subject = document.getElementById('subject').value;
+				subject = document.getElementById('subject').value;
 
                                 Genesys('subscribe','Messenger.ready',function(){
                                         console.log("Messenger ready");
